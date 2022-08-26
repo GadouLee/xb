@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0219)http://w.mpay8.cn/goods_report/eyJpdiI6IjduNTJQRUVpYW9xQXltYlVKWEpSYUE9PSIsInZhbHVlIjoielQvMVM4SDZhSzhLWmUxRmUyWm9odz09IiwibWFjIjoiYTBlNGEzMmVjZDE2OGM1NGM5MGNiYTdmZjA3MmNjYTIwMzAzMTMxNGFkNDBkY2RmZjEwNjIzYTA2NjNkZDRiNCJ9 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./complaint/index.css">
+</head>
+<body>
+    <div class="goods-reports">
+        <div >
+            <label>投诉详细描述:</label>
+            <textarea placeholder="请输入投诉内容(如:付款后不发货/对方销售虚假产品等)。" rows="5" name="report_msg"></textarea>
+            <label>请选择处理意愿:</label>
+            <select name="report_type">
+                <option value="1">无条件退款</option>
+                <option value="2">要求商家更换商品</option>
+                <option value="3">要求商家给我发货</option>
+                <option value="4">客服联系我处理订单</option>
+                <option value="5">其他</option>
+            </select>
+            <label>联系方式:</label>
+            <input type="text" name="phone" placeholder="请输入电话/微信方便客服联系您。">
+            <button type="button" id="submitbotton">立即投诉</button>
+		</div>
+                    </div>
+    <div class="goods-reports-info">
+        <h3>举报的产品链接</h3>
+        <a class="goods-reports-info-content" href="./index.html">
+            <h4>砍价助力高质量互助群</h4>
+            <h5>https://static-a1130839-98b8-48ab-9cc1-197d7eb235f0.bspapp.com</h5>
+        </a>
+    </div>
+    <script>
+		window.onload = function () {
+			var submit = document.getElementById("submitbotton");
+			
+			submit.addEventListener('click',function(){
+				submit.disabled = true;	
+				submit.textContent = "提交中,请稍等...";
+				
+				var timer =setInterval(function(){
+					alert("投诉成功！客服将在7个工作日内回复您");
+					submit.textContent = "立即投诉";
+					submit.disabled = false;	
+					clearInterval(timer);
+				},3000);
+			});
+		}
+	 
+    </script>
+
+</body></html>
